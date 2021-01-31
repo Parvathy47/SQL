@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>
+SQL Mid Term
+</title>
+</head>
+<body leftmargin="250" rightmargin="250">
+<CENTER><h1>SQL Mid Term Exam</h1></CENTER>
+<H3>
+DATE: 31-01-2021<BR>
+DURATION : 120 MINUTES  <BR>
+MAX MARKS: 100 
+<H3>
+<h4> INSTRUCTIONS </h4>
+<ol>
+<li>This paper consists of three sections: A, B and C.</li>
+<li>All the questions in each of the sections are compulsory. </li>
+<li>Section A deals with the creation of a database and its associated tables (with the constraints specified) followed by populating it with data. This section carries 15 marks. </li>
+<li>Section B has 5 questions which must be answered through <b>simple SQL queries without using subqueries or joins</b>.This section carries 25 marks.  </li>
+<li>Section C has 6 questions which must be answered through <b>SQL queries using joins and/or subqueries</b>. This section carries 60 marks.</li>
+<li>All values used in queries should be obtained from queries, until otherwise specified. Hardcoding values in the queries will fetch negative marks.</li>
+<li>Queries written without any question number or with incorrect question number will not be evaluated.</li>
+</ol></li>
+<h2><center>SECTION A</center></h2>
+<table p="0">
+<tr><td style="vertical-align:top">1) </td><td> Create the following 5 tables with the given structure:<br>
+<ul>
+<li>agents (  <u>AGENT_CODE</u> VARCHAR(6),  AGENT_NAME VARCHAR(40) ,  WORKING_AREA VARCHAR(35) ,  COMMISSION DECIMAL(10,2) ,  PHONE_NO VARCHAR(15)</li>
+<li>company (  <u>COMPANY_ID</u> VARCHAR(6),  COMPANY_NAME VARCHAR(25) ,  COMPANY_CITY VARCHAR(25) )</li>
+<li>foods (  <u>ITEM_ID</u> VARCHAR(6),  ITEM_NAME VARCHAR(25) ,  ITEM_UNIT VARCHAR(5) ,  COMPANY_ID VARCHAR(6) )</li>
+<li>customer (  <u>CUST_CODE</u> VARCHAR(6),  CUST_NAME VARCHAR(40),  CUST_CITY VARCHAR(35) ,  WORKING_AREA VARCHAR(35),  CUST_COUNTRY VARCHAR(20),  GRADE DECIMAL(10,0) ,  OPENING_AMT DECIMAL(12,2),  RECEIVE_AMT DECIMAL(12,2),  PAYMENT_AMT DECIMAL(12,2),  OUTSTANDING_AMT DECIMAL(12,2),  PHONE_NO VARCHAR(17),  AGENT_CODE VARCHAR(6) ,)</li>
+<li>orders (  <u>ORD_NUM</u> DECIMAL(6,0),  ORD_AMOUNT DECIMAL(12,2),  ADVANCE_AMOUNT DECIMAL(12,2),  ORD_DATE DATE,  CUST_CODE VARCHAR(6),  AGENT_CODE VARCHAR(6),  ORD_DESCRIPTION VARCHAR(60))</li></ul>
+</td><td style="vertical-align:top">[2*5=10]</td></tr>
+<tr><td style="vertical-align:top">2) </td><td>Insert values into the tables created above from the files given below:
+<ul>
+<li><a href='https://drive.google.com/file/d/1968zuMI6ioqFbiC1lwnVVakYS6OtLFoW/view?usp=sharing' download>Agents</a></li>
+<li><a href='https://drive.google.com/file/d/1Qchda28ym8QMIxEClXkbwDBPiYOAOWU3/view?usp=sharing'>Company</a></li>
+<li><a href='https://drive.google.com/file/d/1i2iJosNuDHwm70jZIUcdUGxTs6ro8cpj/view?usp=sharing'>Foods</a></li>
+<li><a href='https://drive.google.com/file/d/1P9nG05gK0L9xrTgoX7YYnzcIDYSkPw4Y/view?usp=sharing'>Customer</a></li>
+<li><a href='https://drive.google.com/file/d/1dct9-p_Vp-UNuZFZ4n1tcnYfRClwOubU/view?usp=sharing'>Orders</a></li>
+</ul>
+</td><td style="vertical-align:top">[1*5=5]</td></tr>
+</table>
+<h2><center>SECTION B</center></h2>
+<table p="0">
+<tr><td style="vertical-align:top">3) </td><td style="width:1000px">Display the distinct cities where more than 1 agent works and all the agents working there in a comma separated format.</td><td style="vertical-align:bottom">[5]</td></tr>
+<tr><td style="vertical-align:top">4) </td><td>Display the distinct commission values demanded by more than 2 agents and all those agent names in a comma separated format.</td><td style="vertical-align:bottom">[5]</td></tr>
+<tr><td style="vertical-align:top">5) </td><td> Display company names and item names that contain special characters. Also denote in a second column 'Type' whether the name is a company or an item name</td><td style="vertical-align:bottom">[5]</td></tr>
+<tr><td style="vertical-align:top">6) </td><td style="width:1000px">Display the agent names whose first 2 letters can be reordered to get their last 2 letters.</td><td style="vertical-align:bottom">[5]</td></tr>
+<tr><td style="vertical-align:top">7) </td><td>Display agents and cities having same last letter, where agent name is longer than the city name</td><td style="vertical-align:bottom">[5]</td></tr>
+</table>
+<h2><center>SECTION C</center></h2>
+<table p="0">
+<tr><td style="vertical-align:top">8) </td><td style="width:1000px">Display the distinct area codes and all the distinct cities using that area code in a comma separated format. Also against each city display the number of customers and their names.</td><td style="vertical-align:bottom">[10]</td></tr>
+<tr><td style="vertical-align:top">9) </td><td style="width:1000px">For each customer country and each customer city, what is the total number of customers and the total number of agents? Also display the agent names against each count. If city or country value is null, replace it with 'All cities' or 'All countries' respectively.</td><td style="vertical-align:bottom">[10]</td></tr>
+<tr><td style="vertical-align:top">10) </td><td> Display company details that have no items for sale.</td><td style="vertical-align:bottom">[10]</td></tr>
+<tr><td style="vertical-align:top">11) </td><td>Display customer names and agent names associated with those orders for which the advance amount received for an order is 40% or more than the order amount. Ensure that that customers and agents are from the same city </td><td style="vertical-align:bottom">[10]</td></tr>
+<tr><td style="vertical-align:top">12) </td><td> Display agent names who can contact their customers i.e. they have a valid phone number.</td><td style="vertical-align:bottom">[10]</td></tr>
+<tr><td style="vertical-align:top">13) </td><td> List out names of the customers and their day of order month wise. Ensure that months are displayed as January, February, etc.</td><td style="vertical-align:bottom">[10]</td></tr>
+</table>
+</body>
+</html>

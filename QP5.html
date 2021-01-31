@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>
+SQL Mid Term
+</title>
+</head>
+<body leftmargin="250" rightmargin="250">
+<CENTER><h1>SQL Mid Term Exam</h1></CENTER>
+<H3>
+DATE: 31-01-2021<BR>
+DURATION : 120 MINUTES  <BR>
+MAX MARKS: 100 
+<H3>
+<h4> INSTRUCTIONS </h4>
+<ol>
+<li>This paper consists of three sections: A, B and C.</li>
+<li>All the questions in each of the sections are compulsory. </li>
+<li>Section A deals with the creation of a database and its associated tables (with the constraints specified) followed by populating it with data. This section carries 15 marks. </li>
+<li>Section B has 5 questions which must be answered through <b>simple SQL queries without using subqueries or joins</b>.This section carries 25 marks.  </li>
+<li>Section C has 6 questions which must be answered through <b>SQL queries using joins and/or subqueries</b>. This section carries 60 marks.</li>
+<li>All values used in queries should be obtained from queries, until otherwise specified. Hardcoding values in the queries will fetch negative marks.</li>
+<li>Queries written without any question number or with incorrect question number will not be evaluated.</li>
+</ol></li>
+<h2><center>SECTION A</center></h2>
+<table p="0">
+<tr><td style="vertical-align:top">1) </td><td style="width:1000px">Create a database with character set as 'latin1'. Set this database as default.</td><td style="vertical-align:top">[3]</td></tr>
+<tr><td style="vertical-align:top">2) </td><td> Create the following 4 tables with the given structure:<br>
+<ul>
+<li>customers (  <u>customerNumber</u> INT,  customerName VARCHAR(50),  contactLastName VARCHAR(50),  contactFirstName VARCHAR(50),  phone VARCHAR(50),  addressLine1 VARCHAR(50),  addressLine2 VARCHAR(50) ,  city VARCHAR(50),  state VARCHAR(50) ,  postalCode VARCHAR(15) ,  country VARCHAR(50),  salesRepEmployeeNumber INT ,  creditLimit DECIMAL(10,2))</li>
+<li>employees (  <u>employeeNumber</u> INT,  lastName VARCHAR(50),  firstName VARCHAR(50),  extension VARCHAR(10),  email VARCHAR(100),  officeCode VARCHAR(10),  reportsTo INT ,  jobTitle VARCHAR(50))</li>
+<li>ordersData (  <u>orderNumber</u> INT ,  orderDate DATE,  requiredDate DATE,  shippedDate DATE ,  status VARCHAR(15),  comments TEXT,  customerNumber INT )</li>
+<li>offices (  <u>officeCode</u> VARCHAR(10),  city VARCHAR(50),  phone VARCHAR(50),  addressLine1 VARCHAR(50),  addressLine2 VARCHAR(50) ,  state VARCHAR(50) ,  country VARCHAR(50),  postalCode VARCHAR(15),  territory VARCHAR(10)</li></ul>
+</td><td style="vertical-align:top">[2*4=8]</td></tr>
+<tr><td style="vertical-align:top">3) </td><td>Insert values into the tables created above from the files given below:
+<ul>
+<li><a href='https://drive.google.com/file/d/1KXPGuXQPZsx1OlDwOTn1zPiPvvz2FBhU/view?usp=sharing' download>Customers</a></li>
+<li><a href='https://drive.google.com/file/d/17V9ImK6ZCEHxr1KHIA0JpycvPm-Vloeo/view?usp=sharing'>Employees</a></li>
+<li><a href='https://drive.google.com/file/d/1eN9R2fDor3a7-FKmTQ74mXsIdw9CWHIx/view?usp=sharing'>Orders Data</a></li>
+<li><a href='https://drive.google.com/file/d/12tKd5a1pI3RT-OZ_qgmEh3JsRWuGaCh4/view?usp=sharing'>Offices</a></li>
+</ul>
+</td><td style="vertical-align:top">[1*4=4]</td></tr>
+</table>
+<h2><center>SECTION B</center></h2>
+<table p="0">
+<tr><td style="vertical-align:top">4) </td><td style="width:1000px">How many customers are handled by each salesperson? Display all the contact person full names along with each count.</td><td style="vertical-align:bottom">[5]</td></tr>
+<tr><td style="vertical-align:top">5) </td><td>Display employee full names whose email address contains only part of their last name</td><td style="vertical-align:bottom">[5]</td></tr>
+<tr><td style="vertical-align:top">6) </td><td>Get the detail of the customers who cancelled their order after it was shipped</td><td style="vertical-align:bottom">[5]</td></tr>
+<tr><td style="vertical-align:top">7) </td><td style="width:1000px">Which comments are in the form of questions? </td><td style="vertical-align:bottom">[5]</td></tr>
+<tr><td style="vertical-align:top">8) </td><td> Display customer details whose addressline1 does not contain any digits.</td><td style="vertical-align:bottom">[5]</td></tr>
+</table>
+<h2><center>SECTION C</center></h2>
+<table p="0">
+<tr><td style="vertical-align:top">9) </td><td style="width:1000px">List out the salesperson full names with their manager full names and the number of customers each of the salesperson deals with</td><td style="vertical-align:bottom">[15]</td></tr>
+<tr><td style="vertical-align:top">10) </td><td> How many countries have their average customer credit limit greater than 1lakh?</td><td style="vertical-align:bottom">[15]</td></tr>
+<tr><td style="vertical-align:top">11) </td><td>How many customers of the different countries got their order shipped on the date required?</td><td style="vertical-align:bottom">[15]</td></tr>
+<tr><td style="vertical-align:top">12) </td><td style="width:1000px">How many customers fall under each of the office territories?</td><td style="vertical-align:bottom">[15]</td></tr>
+</table>
+</body>
+</html>

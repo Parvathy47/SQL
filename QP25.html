@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>
+SQL Mid Term
+</title>
+</head>
+<body leftmargin="250" rightmargin="250">
+<CENTER><h1>SQL Mid Term Exam</h1></CENTER>
+<H3>
+DATE: 31-01-2021<BR>
+DURATION : 120 MINUTES  <BR>
+MAX MARKS: 100 
+<H3>
+<h4> INSTRUCTIONS </h4>
+<ol>
+<li>This paper consists of three sections: A, B and C.</li>
+<li>All the questions in each of the sections are compulsory. </li>
+<li>Section A deals with the creation of a database and its associated tables (with the constraints specified) followed by populating it with data. This section carries 15 marks. </li>
+<li>Section B has 5 questions which must be answered through <b>simple SQL queries without using subqueries or joins</b>.This section carries 25 marks.  </li>
+<li>Section C has 6 questions which must be answered through <b>SQL queries using joins and/or subqueries</b>. This section carries 60 marks.</li>
+<li>All values used in queries should be obtained from queries, until otherwise specified. Hardcoding values in the queries will fetch negative marks.</li>
+<li>Queries written without any question number or with incorrect question number will not be evaluated.</li>
+</ol></li>
+<h2><center>SECTION A</center></h2>
+<table p="0">
+<tr><td style="vertical-align:top">1) </td><td style="width:1000px">Create a database with character set as 'latin1'. Set this database as default.</td><td style="vertical-align:top">[3]</td></tr>
+<tr><td style="vertical-align:top">2) </td><td> Create the following 4 tables with the given structure:<br>
+<ul>
+<li>customers (  <u>customerNumber</u> INT,  customerName VARCHAR(50),  contactLastName VARCHAR(50),  contactFirstName VARCHAR(50),  phone VARCHAR(50),  addressLine1 VARCHAR(50),  addressLine2 VARCHAR(50) ,  city VARCHAR(50),  state VARCHAR(50) ,  postalCode VARCHAR(15) ,  country VARCHAR(50),  salesRepEmployeeNumber INT ,  creditLimit DECIMAL(10,2))</li>
+<li>products (  <u>productCode</u> VARCHAR(15),  productName VARCHAR(70),  productLine VARCHAR(50),  productScale VARCHAR(10),  productVendor VARCHAR(50),  productDescription TEXT,  quantityInStock SMALLINT ,  buyPrice DECIMAL(10,2),  MSRP DECIMAL(10,2))</li>
+<li>ordersData (  <u>orderNumber</u> INT ,  orderDate DATE,  requiredDate DATE,  shippedDate DATE ,  status VARCHAR(15),  comments TEXT,  customerNumber INT )</li>
+<li>orderdetails (  <u>orderNumber</u> INT,  <u>productCode</u> VARCHAR(15),  quantityOrdered INT,  priceEach DECIMAL(10,2),  orderLineNumber SMALLINT)</li></ul>
+</td><td style="vertical-align:top">[2*4=8]</td></tr>
+<tr><td style="vertical-align:top">3) </td><td>Insert values into the tables created above from the files given below:
+<ul>
+<li><a href='https://drive.google.com/file/d/1KXPGuXQPZsx1OlDwOTn1zPiPvvz2FBhU/view?usp=sharing' download>Customers</a></li>
+<li><a href='https://drive.google.com/file/d/1AExd6-0BMhw7Cy7DWoVTMmp0vMxBiLyV/view?usp=sharing'>Products</a></li>
+<li><a href='https://drive.google.com/file/d/1eN9R2fDor3a7-FKmTQ74mXsIdw9CWHIx/view?usp=sharing'>Orders Data</a></li>
+<li><a href='https://drive.google.com/file/d/1YX2JtkyysAq8KNcyeXG7Z1FdQbNU8lui/view?usp=sharing'>Order Details</a></li>
+</ul>
+</td><td style="vertical-align:top">[1*4=4]</td></tr>
+</table>
+<h2><center>SECTION B</center></h2>
+<table p="0">
+<tr><td style="vertical-align:top">4) </td><td style="width:1000px">How many orders were not shipped in the same month that it was ordered in?</td><td style="vertical-align:bottom">[5]</td></tr>
+<tr><td style="vertical-align:top">5) </td><td>How many product names do not start with a digit?</td><td style="vertical-align:bottom">[5]</td></tr>
+<tr><td style="vertical-align:top">6) </td><td>Display the distinct productlines and product scales with their highest MSRP. Replace null values in scale with 'All Scales' and null value in product lines with 'All Product Lines'.</td><td style="vertical-align:bottom">[5]</td></tr>
+<tr><td style="vertical-align:top">7) </td><td style="width:1000px">Which countries, other than France, have sales in more than 5 cities? Display the number of cities and their names along each country</td><td style="vertical-align:bottom">[5]</td></tr>
+<tr><td style="vertical-align:top">8) </td><td>Display full customer names that contain special characters</td><td style="vertical-align:bottom">[5]</td></tr>
+</table>
+<h2><center>SECTION C</center></h2>
+<table p="0">
+<tr><td style="vertical-align:top">9) </td><td style="width:1000px">Display count of French customers for each product line and product scale.</td><td style="vertical-align:bottom">[15]</td></tr>
+<tr><td style="vertical-align:top">10) </td><td> What are the different statuses and the count of each status against the customer(s) with the highest credit limit?</td><td style="vertical-align:bottom">[15]</td></tr>
+<tr><td style="vertical-align:top">11) </td><td>For the product with least quantity in stock, list out the total orders placed in each month. </td><td style="vertical-align:bottom">[15]</td></tr>
+<tr><td style="vertical-align:top">12) </td><td style="width:1000px">For each of the European countries, how many orders did each of the customers place? Display country name, customer name and number of orders. Replace null values in country column as 'Europe total' and in customer name column as 'All customers'.</td><td style="vertical-align:bottom">[15]</td></tr>
+</table>
+</body>
+</html>
